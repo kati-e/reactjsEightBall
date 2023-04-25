@@ -14,15 +14,17 @@ function App() {
   return (
     <div className="App">
       <h1>Eight Ball</h1>
-      <p>Welcome to my simple Eight Ball application. <br/>Ask it a question and it will provide the answer you seek.</p>
+      <p>Welcome to my simple Eight Ball application. <br/>Ask it a yes/no question and it will provide the answer you seek.</p>
       <h3>Your Question:</h3>
-      <form onSubmit={handleSubmit}>
-         <input name="question" type="text"></input>
-         <button name="submit" type="submit">Go!</button>
+      <form id="myForm" onSubmit={handleSubmit}>
+         <div className="myForm_inputs">
+          <input className="input" name="question" type="text"></input>
+          <button for="myForm" className="button" name="submit" type="submit">Go!</button>
+         </div>
       </form>
       {question ? <p>Question: '{question}'</p> : null}
       {answer ? <p className='answers'>Answer: '{answer}'</p> : null}
-      <p><br/>My wisdom is final. Do what you will with this information.</p>
+      {question && answer ? <p><br/>My wisdom is final. Do what you will with this information.</p> : <p>Go ahead, ask your question.</p>}
     </div>
   );
 }

@@ -1,7 +1,59 @@
+:root {
+  --dark: rgb(70, 70, 70);
+  --accent: rgb(137, 255, 216);
+  --outline-focus: rgb(255, 0, 162);
+  --light-grey: rgb(251, 251, 251);
+  --text: rgb(15, 15, 15);
+  --response: blue;
+}
+
 .App {
   text-align: center;
   font-family: 'Source Code Pro', sans-serif;
+  font-size: 17px;
+}
+.App * {
+  font-family: inherit;
+  color: var(--text);
+}
+.myForm_inputs {
+  position: relative;
+  left: 49%;
+  transform: translateX(-50%);
+  max-width: 40rem;
+}
+.input {
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--dark);
+  border-radius: 99rem;
+  width: 100%;
+  font-size: 1rem;
+  font-style: italic;
+}
+.input:focus-visible {
+  outline: 1px solid var(--outline-focus);
+  border-color: transparent;
+}
+.button {
+  position: absolute;
+  right: -2.6rem;
+  top: 0.4rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  background-color: var(--accent);
+  border: 1px solid var(--dark);
+  border-radius: 99rem;
+}
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: .3s;
+}
+.button:focus-visible {
+  outline: 1px solid var(--outline-focus);
+  border-color: transparent;
+  background-color: var(--accent);
 }
 .answer {
-  color: blue;
+  color: var(--response);
 }
