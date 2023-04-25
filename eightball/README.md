@@ -6,7 +6,9 @@ Download repo & cd to eightball dir. Then, in the console do 'npm start' to run 
 
 Rules:
 1. Enter your question through the input box and click 'Go!'
-2. Enjoy your random eightball answer (its wisdom is final)
+2. Once you are happy with your question click the 'Generate Answer' button to generate your answer
+3. Once done, click 'Reset' to go back and do another question
+4. Enjoy your random eightball answer (its wisdom is final)
 
 Just for fun and practise!
 
