@@ -12,11 +12,51 @@ function App() {
     const inputVal = event.target.question.value;
     setQuestion(inputVal);
     setAnswer('');
+    questionRef.current.value = '';
   }
 
   //Get random eightball answer out of 0 - 7 different responses
   function generateAnswer() {
-    const answer = 'test';
+    let answer = '';
+    let randomNum = Math.floor(Math.random() * 8);
+
+    switch(randomNum) {
+      case 0: {
+        answer = 'It is certain';
+        break;
+      }
+      case 1: {
+        answer = 'It is decidedly so';
+        break;
+      }
+      case 2: {
+        answer = 'Reply hazy try again';
+        break;
+      }
+      case 3: {
+        answer = 'Cannot predict now';
+        break;
+      }
+      case 4: {
+        answer = 'Do not count on it';
+        break;
+      }
+      case 5: {
+        answer = 'My sources say no';
+        break;
+      }
+      case 6: {
+        answer = 'Outlook not so good';
+        break;
+      }
+      case 7: {
+        answer = 'Signs point to yes';
+        break;
+      }
+      default: {
+        answer = 'There has been an error, lol sorry :P';
+      }
+    }
     setAnswer(answer);
   }
 
@@ -24,7 +64,6 @@ function App() {
   function resetAll() {
     setAnswer('');
     setQuestion('');
-    questionRef.current.value = '';
   }
 
   return (
@@ -46,7 +85,7 @@ function App() {
 
       {/* if 'answer' is not null */}
       {answer ? <p className='answers'>Answer: '{answer}'</p> : null}
-      {answer ? <p><br/>My wisdom is final. Do what you will with this information.</p> : <p>Go ahead, ask your question.</p>}
+      {answer ? <p>My wisdom is final. Do what you will with this information.</p> : <p>Go ahead, ask your question.</p>}
       {answer ? <button className="button" onClick={resetAll}>Reset All</button> : null}
     </div>
   );
