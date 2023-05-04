@@ -4,7 +4,7 @@ I made a very very simple javascript version of an eightball console app, and de
 ![screenshot of my app](https://github.com/kati-e/reactjsEightBall/blob/master/Screen%20Shot%202023-04-25%20at%201.55.16%20pm.png)
 
 How to use: 
-Download repo & cd to eightball dir. Then, in the console do 'npm start' to run the react app.
+Download repo & cd to eightball dir. (You'll need to reinstall a fresh 'node-modules' (install npm) since I did not include in this repo) Then, in the console do 'npm start' to run the react app.
 
 Rules:
 1. Enter your question through the input box and click 'Go!'
