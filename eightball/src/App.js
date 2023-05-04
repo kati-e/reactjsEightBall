@@ -32,7 +32,7 @@ function App() {
     'Signs point to yes'
     ];
 
-    randomNum ? answer = eightBallAnswers[randomNum] : answer = 'ERROR. Issue with randomNum variable';
+    randomNum ? answer = eightBallAnswers[randomNum] : answer = 'ERROR. Issue with either the answers array or the randomNum variable.';
 
     setAnswer(answer);
 
