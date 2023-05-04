@@ -20,44 +20,22 @@ function App() {
     let answer = '';
     let randomNum = Math.floor(Math.random() * 8);
 
-    switch(randomNum) {
-      case 0: {
-        answer = 'It is certain';
-        break;
-      }
-      case 1: {
-        answer = 'It is decidedly so';
-        break;
-      }
-      case 2: {
-        answer = 'Reply hazy try again';
-        break;
-      }
-      case 3: {
-        answer = 'Cannot predict now';
-        break;
-      }
-      case 4: {
-        answer = 'Do not count on it';
-        break;
-      }
-      case 5: {
-        answer = 'My sources say no';
-        break;
-      }
-      case 6: {
-        answer = 'Outlook not so good';
-        break;
-      }
-      case 7: {
-        answer = 'Signs point to yes';
-        break;
-      }
-      default: {
-        answer = 'There has been an error, lol sorry :P';
-      }
-    }
+    //Make an array of classic eightball answers
+    const eightBallAnswers = [
+    'It is certain',
+    'It is decidedly so',
+    'Reply hazy try again',
+    'Cannot predict now',
+    'Do not count on it',
+    'My sources say no',
+    'Outlook not so good',
+    'Signs point to yes'
+    ];
+
+    randomNum ? answer = eightBallAnswers[randomNum] : answer = 'ERROR. Issue with randomNum variable';
+
     setAnswer(answer);
+
   }
 
   //Reset all to restart the process for the user
